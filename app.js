@@ -106,6 +106,10 @@ function displayFeed() {
       }
   );
   for (var post in feed) {
+    console.log("post.from.id:");
+    console.log(post.from.id);
+    console.log("userId:");
+    console.log(userId);
     if (post.from.id != userId) {
       console.log("looping through posts");
       console.log(post)
