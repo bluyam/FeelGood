@@ -91,6 +91,7 @@ function testAPI() {
 
 function handleSinglePosts() {
   var status = document.getElementById('status');
+  status.style.display = 'block';
   status.innerHTML = 'Handling Posts!';
 }
 
