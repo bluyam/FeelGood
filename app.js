@@ -83,13 +83,11 @@ function displayFeed() {
   var feed;
   var userId;
   var postUserId;
-/* make the API call */
+  /* make the API call */
   FB.api("/me/feed",
-      {
-          "with": "location"
-      },
       function (response) {
         if (response && !response.error) {
+          console.log("logging data");
           feed = response.data;
           // for each post in feed
           // if (user.id != from.id)
@@ -99,12 +97,15 @@ function displayFeed() {
   FB.api("/me",
       function (response) {
         if (response && !response.error) {
+          console.log("logging user id");
           userId = response.id;
         }
       }
   );
   for (var post in feed) {
-    if (post.from != userId)
+    if (post.from != userId) {
+      console.log("looping through posts");
       console.log(post)
+    }
   }
 }
