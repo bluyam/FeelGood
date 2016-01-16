@@ -1,6 +1,8 @@
 // app.js
 
-var MAX_PAGES = 10;
+var MAX_RESULTS = 100;
+var friends = new Set([]);
+var friendDivs = [];
 
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
@@ -85,17 +87,6 @@ function testAPI() {
   });
 }
 
-function handleConversation() {
-  FB.api(
-    "/743877419075563",
-    function (response) {
-      if (response && !response.error) {
-        console.log("you did it fam");
-      }
-    }
-  );
-}
-
 function handlePosterPicture(posterId, message, index) {
   var request = "/" + posterId + "/picture?width=300";
   FB.api(
@@ -130,8 +121,11 @@ function handlePosterPicture(posterId, message, index) {
           console.log("mess append");
           post.appendChild(mess);
           console.log("append to doc");
-          document.getElementById('posts').appendChild(post);
-          handleConversation();
+          // document.getElementById('posts').appendChild(post);
+
+          // add to data storage
+          friends.add(posterId);
+          friendDivs.push(post);
         }
       }
     }
@@ -142,11 +136,13 @@ function handlePosterPicture(posterId, message, index) {
 function handlePosts(userId, feed) {
   for (var i = 0; i < feed.length; i++) {
     var posterId = feed[i].from.id;
-    if (posterId != userId) {
-      // needs to be changed to account for posts which user is tagged in
+    if (posterId != userId && !friends.has(posterId)) {
+
     handlePosterPicture(posterId, feed[i].message, i);
     }
   }
+  console.log(friends);
+  console.log(friendDivs);
 }
 
 function getUserId(feed) {
@@ -165,7 +161,7 @@ function getUserId(feed) {
 function displayFeed() {
   var feed;
   /* make the API call */
-  FB.api("/me/feed?fields=from,message&limit=200",
+  FB.api("/me/feed?fields=from,message&limit="+MAX_RESULTS.toString(),
       function (response) {
         if (response && !response.error) {
           console.log("logging data");
