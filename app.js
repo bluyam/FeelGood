@@ -93,7 +93,7 @@ function handleSinglePosts() {
   var status = document.getElementById('status');
   status.style.display = 'block';
   status.innerHTML = 'Handling Posts!';
-  console.log
+  console.log(friends);
 }
 
 function handlePosterPicture(posterId, message, index) {
