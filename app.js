@@ -1,10 +1,11 @@
 // app.js
 
 var MAX_RESULTS = 100;
-var MAX_SINGLE_POSTS = 5;
+var MAX_SINGLE_POSTS = 8;
 
 var friends = new Set([]);
 var friendDivs = [];
+var hasLoadedMaxPosts = false;
 
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
@@ -135,8 +136,9 @@ function handlePosterPicture(posterId, message, index) {
           // add to data storage
           friends.add(posterId);
           friendDivs.push(post);
-          if (friendDivs.length >= MAX_SINGLE_POSTS) {
+          if (friendDivs.length >= MAX_SINGLE_POSTS && !hasLoadedMaxPosts) {
             handleSinglePosts();
+            hasLoadedMaxPosts = true;
           }
         }
       }
