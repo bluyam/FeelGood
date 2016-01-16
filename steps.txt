@@ -1,0 +1,14 @@
+steps.txt
+
+collect one message/post/comment compliment on facebook
+- start with "thank you"
+- add "ily"
+- detect meaningful compliments
+
+use the results to build an interactive web page
+- facebook login
+- display some facebook message data
+- display message data that contains the words thank you (first 10)
+- maximize friend variety
+- display heart div of profile pictures
+- add share link at end
