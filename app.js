@@ -85,13 +85,28 @@ function testAPI() {
   });
 }
 
+function handlePosterPicture(posterId, message) {
+  var request = "/" + posterId + "/picture";
+  FB.api(
+    request,
+    function (response) {
+      if (response && !response.error) {
+        if (message !== undefined) {
+          console.log(response);
+          console.log(message);
+        }
+      }
+    }
+  );
+}
+
+
 function handlePosts(userId, feed) {
   for (var i = 0; i < feed.length; i++) {
-    if (feed[i].from.id != userId) {
-      if (feed[i].message !== undefined) {
-        // needs to be changed to account for posts which user is tagged in
-        console.log(feed[i].message);
-      }
+    var posterId = feed[i].from.id
+    if (posterId != userId) {
+      // needs to be changed to account for posts which user is tagged in
+      handlePosterPicture(posterId, feed[i].message)
     }
   }
 }
