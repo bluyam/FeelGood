@@ -85,18 +85,30 @@ function testAPI() {
   });
 }
 
-function handlePosterPicture(posterId, message) {
+function handlePosterPicture(posterId, message, index) {
   var request = "/" + posterId + "/picture?width=300";
   FB.api(
     request,
     function (response) {
       if (response && !response.error) {
         if (message !== undefined) {
-          pictureURL = response.data.url;
+          var post = document.createElement('div');
+          post.className = 'post';
+          // create picture element
           console.log(pictureURL);
-          document.getElementById('profile-picture').src = pictureURL;
+          var img = document.createElement('img');
+          img.className = 'profile-picture';
+          img.id = index;
+          pictureURL = response.data.url;
+          img.src = pictureURL;
+          // create message element
           console.log(message);
-          document.getElementById('message').innerHTML = message;
+          var mess = document.createElement('div');
+          mess.innerHTML = message;
+          // append to posts
+          post.appendChild(img);
+          post.appendChild(mess);
+          document.getElementById('posts').appendChild(post);
         }
       }
     }
@@ -109,7 +121,7 @@ function handlePosts(userId, feed) {
     var posterId = feed[i].from.id
     if (posterId != userId) {
       // needs to be changed to account for posts which user is tagged in
-      handlePosterPicture(posterId, feed[i].message)
+      handlePosterPicture(posterId, feed[i].message, i)
     }
   }
 }
