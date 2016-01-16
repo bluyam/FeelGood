@@ -89,6 +89,7 @@ function displayFeed() {
         if (response && !response.error) {
           console.log("logging data");
           feed = response.data;
+          console.log("feed")
           // for each post in feed
           // if (user.id != from.id)
         }
@@ -99,6 +100,7 @@ function displayFeed() {
         if (response && !response.error) {
           console.log("logging user id");
           userId = response.id;
+          console.log(userId)
         }
       }
   );
