@@ -88,7 +88,7 @@ function displayFeed() {
       function (response) {
         if (response && !response.error) {
           console.log("logging data");
-          feed = response.data;
+          feed = response;
           console.log(feed)
           // for each post in feed
           // if (user.id != from.id)
