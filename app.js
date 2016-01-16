@@ -76,8 +76,11 @@ function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
   FB.api('/me', function(response) {
     console.log('Successful login for: ' + response.name);
-    document.getElementById('status').innerHTML =
-      'Thanks for logging in, ' + response.name + '!';
+    var status = document.getElementsById('status');
+    status.innerHTML = 'Thanks for logging in, ' + response.name + '!';
+    var loginButton = document.getElementById('fb-login-button');
+    loginButton.style.visibility = 'hidden';
+    status.style.visibility = 'hidden';
     displayFeed();
   });
 }
@@ -86,6 +89,7 @@ function handlePosts(userId, feed) {
   for (var i = 0; i < feed.length; i++) {
     if (feed[i].from.id != userId) {
       if (feed[i].message !== undefined) {
+        // needs to be changed to account for posts which user is tagged in
         console.log(feed[i].message);
       }
     }
