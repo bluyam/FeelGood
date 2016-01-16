@@ -85,7 +85,7 @@ function testAPI() {
   });
 }
 
-handleConversation() {
+function handleConversation() {
   FB.api(
     "/743877419075563",
     function (response) {
