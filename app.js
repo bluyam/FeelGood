@@ -106,6 +106,7 @@ function displayFeed() {
         }
       }
   );
+  console.log(feed[0].from.id)
   for (post in feed) {
     console.log("post.from.id:");
     console.log(post.from.id);
