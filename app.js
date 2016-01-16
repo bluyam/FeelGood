@@ -144,11 +144,11 @@ function handlePosterPicture(posterId, message, index) {
           // document.getElementById('posts').appendChild(post);
 
           // add to data storage
-          previousLength = friends.length;
+          previousLength = friends.size;
           if (!hasLoadedMaxPosts) {
             friends.add(posterId);
           }
-          newLength = friends.length;
+          newLength = friends.size;
           if (previousLength != newLength) {
             friendDivs.push(post);
           }
