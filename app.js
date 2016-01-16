@@ -81,6 +81,7 @@ function testAPI() {
 
 function displayFeed() {
   var feed;
+  var post;
   var userId;
   /* make the API call */
   FB.api("/me/feed?fields=from,message", {
@@ -105,7 +106,7 @@ function displayFeed() {
         }
       }
   );
-  for (var post in feed) {
+  for (post in feed) {
     console.log("post.from.id:");
     console.log(post.from.id);
     console.log("userId:");
