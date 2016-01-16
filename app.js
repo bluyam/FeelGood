@@ -1,7 +1,7 @@
 // app.js
 
 var MAX_RESULTS = 100;
-var MAX_SINGLE_POSTS = 8;
+var MAX_SINGLE_POSTS = 2;
 
 var friends = new Set([]);
 var friendDivs = [];
