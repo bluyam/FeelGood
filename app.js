@@ -93,6 +93,7 @@ function handleSinglePosts() {
   var status = document.getElementById('status');
   status.style.display = 'block';
   status.innerHTML = 'Handling Posts!';
+  console.log
 }
 
 function handlePosterPicture(posterId, message, index) {
@@ -113,7 +114,7 @@ function handlePosterPicture(posterId, message, index) {
           img.className = 'profile-picture';
           img.id = "image"+index.toString();
           img.src = pictureURL;
-          console.log(img);
+          // console.log(img);
 
           // create message element
           console.log(message);
@@ -121,14 +122,14 @@ function handlePosterPicture(posterId, message, index) {
           mess.className = 'message';
           mess.id = "message"+index.toString();
           mess.innerHTML = message;
-          console.log(mess);
+          // console.log(mess);
 
           // append all to posts
-          console.log("img append");
+          // console.log("img append");
           post.appendChild(img);
-          console.log("mess append");
+          // console.log("mess append");
           post.appendChild(mess);
-          console.log("append to doc");
+          // console.log("append to doc");
           // document.getElementById('posts').appendChild(post);
 
           // add to data storage
@@ -158,9 +159,9 @@ function getUserId(feed) {
   FB.api("/me",
       function (response) {
         if (response && !response.error) {
-          console.log("logging user id");
+          // console.log("logging user id");
           userId = response.id;
-          console.log(userId);
+          // console.log(userId);
           handlePosts(userId, feed);
         }
       }
@@ -173,9 +174,9 @@ function displayFeed() {
   FB.api("/me/feed?fields=from,message&limit="+MAX_RESULTS.toString(),
       function (response) {
         if (response && !response.error) {
-          console.log("logging data");
+          // console.log("logging data");
           feed = response.data;
-          console.log(feed)
+          // console.log(feed)
           getUserId(feed)
         }
       }
