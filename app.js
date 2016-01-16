@@ -75,18 +75,36 @@ function testAPI() {
     console.log('Successful login for: ' + response.name);
     document.getElementById('status').innerHTML =
       'Thanks for logging in, ' + response.name + '!';
+    displayFeed();
   });
 }
 
+function displayFeed() {
+  var feed;
+  var userId;
+  var postUserId;
 /* make the API call */
-FB.api(
-    "/me/feed",
-    {
-        "with": "location"
-    },
-    function (response) {
-      if (response && !response.error) {
-        /* handle the result */
+  FB.api("/me/feed",
+      {
+          "with": "location"
+      },
+      function (response) {
+        if (response && !response.error) {
+          feed = response.data;
+          // for each post in feed
+          // if (user.id != from.id)
+        }
       }
-    }
-);
+  );
+  FB.api("/me",
+      function (response) {
+        if (response && !response.error) {
+          userId = response.id;
+        }
+      }
+  );
+  for (var post in feed) {
+    if (post.from != userId)
+      console.log(post)
+  }
+}
