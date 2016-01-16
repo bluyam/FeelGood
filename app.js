@@ -90,10 +90,10 @@ handleConversation() {
     "/743877419075563",
     function (response) {
       if (response && !response.error) {
-        console.log("you did it fam")
+        console.log("you did it fam");
       }
     }
-);
+  );
 }
 
 function handlePosterPicture(posterId, message, index) {
