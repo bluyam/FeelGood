@@ -82,7 +82,6 @@ function testAPI() {
 function displayFeed() {
   var feed;
   var userId;
-  var postUserId;
   /* make the API call */
   FB.api("/me/feed?fields=from,message", {
         "with": "location"
@@ -107,7 +106,7 @@ function displayFeed() {
       }
   );
   for (var post in feed) {
-    if (post.from != userId) {
+    if (post.from.id != userId) {
       console.log("looping through posts");
       console.log(post)
     }
