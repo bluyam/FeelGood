@@ -1,4 +1,7 @@
 // app.js
+
+var MAX_PAGES = 10;
+
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
   console.log('statusChangeCallback');
@@ -82,7 +85,9 @@ function testAPI() {
 function handlePosts(userId, feed) {
   for (var i = 0; i < feed.length; i++) {
     if (feed[i].from.id != userId) {
-      console.log(feed[i].message);
+      if (feed[i].message !== undefined) {
+        console.log(feed[i].message);
+      }
     }
   }
 }
@@ -103,7 +108,7 @@ function getUserId(feed) {
 function displayFeed() {
   var feed;
   /* make the API call */
-  FB.api("/me/feed?fields=from,message", {
+  FB.api("/me/feed?fields=from,message&limit=50", {
         "with": "location"
       }
       ,function (response) {
