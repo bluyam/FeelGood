@@ -1,6 +1,8 @@
 // app.js
 
 var MAX_RESULTS = 100;
+var MAX_SINGLE_POSTS = 5;
+
 var friends = new Set([]);
 var friendDivs = [];
 
@@ -87,6 +89,11 @@ function testAPI() {
   });
 }
 
+function handleSinglePosts() {
+  var status = document.getElementById('status');
+  status.innerHTML = 'Handling Posts!';
+}
+
 function handlePosterPicture(posterId, message, index) {
   var request = "/" + posterId + "/picture?width=300";
   FB.api(
@@ -126,6 +133,9 @@ function handlePosterPicture(posterId, message, index) {
           // add to data storage
           friends.add(posterId);
           friendDivs.push(post);
+          if (friendDivs.length >= MAX_SINGLE_POSTS) {
+            handleSinglePosts();
+          }
         }
       }
     }
@@ -134,15 +144,13 @@ function handlePosterPicture(posterId, message, index) {
 
 
 function handlePosts(userId, feed) {
+  var count = 0;
   for (var i = 0; i < feed.length; i++) {
     var posterId = feed[i].from.id;
     if (posterId != userId && !friends.has(posterId)) {
-
-    handlePosterPicture(posterId, feed[i].message, i);
+      handlePosterPicture(posterId, feed[i].message, i);
     }
   }
-  console.log(friends);
-  console.log(friendDivs);
 }
 
 function getUserId(feed) {
