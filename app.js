@@ -84,6 +84,8 @@ function handlePosts(userId, feed) {
   console.log(feed[0].from.id);
   var post;
   for (post in feed) {
+    console.log("post");
+    console.log(post);
     console.log("post.from.id:");
     console.log(post.from.id);
     console.log("userId:");
