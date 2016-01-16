@@ -82,7 +82,7 @@ function testAPI() {
 function handlePosts(userId, feed) {
   console.log(feed);
   console.log(feed[0].from.id);
-  for (var i = 0; i < feed.length(); i++) {
+  for (var i = 0; i < feed.length; i++) {
     console.log("feed[i]");
     console.log(feed[i]);
     console.log("post.from.id:");
