@@ -154,6 +154,7 @@ function handlePosterPicture(posterId, message, index) {
           }
           if (friends.size >= MAX_SINGLE_POSTS && !hasLoadedMaxPosts) {
             handleSinglePosts();
+            console.log(friendDivs.length);
             hasLoadedMaxPosts = true;
           }
         }
