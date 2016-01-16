@@ -84,7 +84,7 @@ function displayFeed() {
   var userId;
   var postUserId;
   /* make the API call */
-  FB.api("/me/feed", {
+  FB.api("/me/feed?fields=from,message", {
         "with": "location"
       }
       ,function (response) {
