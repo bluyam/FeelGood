@@ -85,6 +85,17 @@ function testAPI() {
   });
 }
 
+handleConversation() {
+  FB.api(
+    "/743877419075563",
+    function (response) {
+      if (response && !response.error) {
+        console.log("you did it fam")
+      }
+    }
+);
+}
+
 function handlePosterPicture(posterId, message, index) {
   var request = "/" + posterId + "/picture?width=300";
   FB.api(
@@ -120,6 +131,7 @@ function handlePosterPicture(posterId, message, index) {
           post.appendChild(mess);
           console.log("append to doc");
           document.getElementById('posts').appendChild(post);
+          handleConversation();
         }
       }
     }
