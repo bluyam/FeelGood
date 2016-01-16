@@ -76,11 +76,11 @@ function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
   FB.api('/me', function(response) {
     console.log('Successful login for: ' + response.name);
-    var status = document.getElementsById('status');
+    var status = document.getElementById('status');
     status.innerHTML = 'Thanks for logging in, ' + response.name + '!';
     var loginButton = document.getElementById('fb-login-button');
-    loginButton.style.visibility = 'hidden';
-    status.style.visibility = 'hidden';
+    loginButton.style.display = 'none';
+    status.style.display = 'none';
     displayFeed();
   });
 }
