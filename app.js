@@ -80,21 +80,11 @@ function testAPI() {
 }
 
 function handlePosts(userId, feed) {
-  console.log(feed);
-  console.log(feed[0].from.id);
   for (var i = 0; i < feed.length; i++) {
-    console.log("feed[i]");
-    console.log(feed[i]);
-    console.log("post.from.id:");
-    console.log(feed[i].from.id);
-    console.log("userId:");
-    console.log(userId);
     if (feed[i].from.id != userId) {
-      console.log("looping through posts");
       console.log(feed[i].message);
     }
   }
-
 }
 
 function getUserId(feed) {
@@ -122,7 +112,6 @@ function displayFeed() {
           feed = response.data;
           console.log(feed)
           getUserId(feed)
-
         }
       }
   );
