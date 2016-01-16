@@ -92,22 +92,28 @@ function handlePosterPicture(posterId, message, index) {
     function (response) {
       if (response && !response.error) {
         if (message !== undefined) {
+          // create post element
           var post = document.createElement('div');
           post.className = 'post';
+
           // create picture element
           pictureURL = response.data.url;
           console.log(pictureURL);
           var img = document.createElement('img');
           img.className = 'profile-picture';
-          img.id = index;
+          img.id = "image"+index.toString();
           img.src = pictureURL;
           console.log(img);
+
           // create message element
           console.log(message);
           var mess = document.createElement('div');
+          mess.className = 'message';
+          mess.id = "message"+index.toString();
           mess.innerHTML = message;
           console.log(mess);
-          // append to posts
+
+          // append all to posts
           console.log("img append");
           post.appendChild(img);
           console.log("mess append");
