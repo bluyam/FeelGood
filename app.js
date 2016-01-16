@@ -140,7 +140,7 @@ function handlePosterPicture(posterId, message, index) {
           if (previousLength != newLength) {
             friendDivs.push(post);
           }
-          if (friends.length >= MAX_SINGLE_POSTS && !hasLoadedMaxPosts) {
+          if (friends.size >= MAX_SINGLE_POSTS && !hasLoadedMaxPosts) {
             handleSinglePosts();
             hasLoadedMaxPosts = true;
           }
