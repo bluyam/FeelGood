@@ -101,13 +101,18 @@ function handlePosterPicture(posterId, message, index) {
           img.className = 'profile-picture';
           img.id = index;
           img.src = pictureURL;
+          console.log(img);
           // create message element
           console.log(message);
           var mess = document.createElement('div');
           mess.innerHTML = message;
+          console.log(mess);
           // append to posts
+          console.log("img append");
           post.appendChild(img);
+          console.log("mess append");
           post.appendChild(mess);
+          console.log("append to doc");
           document.getElementById('posts').appendChild(post);
         }
       }
