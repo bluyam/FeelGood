@@ -94,6 +94,9 @@ function handleSinglePosts() {
   var status = document.getElementById('status');
   status.style.display = 'block';
   status.innerHTML = 'Handling Posts!';
+  for (var i = 0; i < friendDivs.size(); i++) {
+    document.getElementById('posts').appendChild(friendDivs[i]);
+  }
   console.log(friends);
 }
 
