@@ -82,17 +82,16 @@ function testAPI() {
 function handlePosts(userId, feed) {
   console.log(feed);
   console.log(feed[0].from.id);
-  var post = Object();
-  for (post in feed) {
-    console.log("post");
-    console.log(post);
+  for (var i = 0; i < feed.length(); i++) {
+    console.log("feed[i]");
+    console.log(feed[i]);
     console.log("post.from.id:");
-    console.log(post.from.id);
+    console.log(feed[i].from.id);
     console.log("userId:");
     console.log(userId);
-    if (post.from.id != userId) {
+    if (feed[i].from.id != userId) {
       console.log("looping through posts");
-      console.log(post)
+      console.log(feed[i].message);
     }
   }
 
