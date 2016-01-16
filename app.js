@@ -79,35 +79,10 @@ function testAPI() {
   });
 }
 
-function displayFeed() {
-  var feed;
-  var post;
-  var userId;
-  /* make the API call */
-  FB.api("/me/feed?fields=from,message", {
-        "with": "location"
-      }
-      ,function (response) {
-        if (response && !response.error) {
-          console.log("logging data");
-          feed = response.data;
-          console.log(feed)
-          // for each post in feed
-          // if (user.id != from.id)
-        }
-      }
-  );
-  FB.api("/me",
-      function (response) {
-        if (response && !response.error) {
-          console.log("logging user id");
-          userId = response.id;
-          console.log(userId)
-        }
-      }
-  );
+function handlePosts(userId, feed) {
   console.log(feed);
   console.log(feed[0].from.id);
+  var post;
   for (post in feed) {
     console.log("post.from.id:");
     console.log(post.from.id);
@@ -118,4 +93,36 @@ function displayFeed() {
       console.log(post)
     }
   }
+
+}
+
+function getUserId(feed) {
+  FB.api("/me",
+      function (response) {
+        if (response && !response.error) {
+          console.log("logging user id");
+          userId = response.id;
+          console.log(userId);
+          handlePosts(userId, feed);
+        }
+      }
+  );
+}
+
+function displayFeed() {
+  var feed;
+  /* make the API call */
+  FB.api("/me/feed?fields=from,message", {
+        "with": "location"
+      }
+      ,function (response) {
+        if (response && !response.error) {
+          console.log("logging data");
+          feed = response.data;
+          console.log(feed)
+          getUserId(feed)
+
+        }
+      }
+  );
 }
