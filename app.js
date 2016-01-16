@@ -101,7 +101,7 @@ function handleSinglePosts() {
 }
 
 function handlePosterPicture(posterId, message, index) {
-  var request = "/" + posterId + "/?fields=name,picture&width=300";
+  var request = "/" + posterId + "/?fields=picture.width(300),name";
   FB.api(
     request,
     function (response) {
