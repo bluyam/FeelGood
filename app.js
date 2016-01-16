@@ -98,7 +98,7 @@ function handleSinglePosts() {
 }
 
 function handlePosterPicture(posterId, message, index) {
-  var request = "/" + posterId + "/picture?width=300";
+  var request = "/" + posterId + "/?fields=name,picture&width=300";
   FB.api(
     request,
     function (response) {
@@ -108,8 +108,14 @@ function handlePosterPicture(posterId, message, index) {
           var post = document.createElement('div');
           post.className = 'post';
 
+          // create name element
+          var name = document.createElement('div');
+          name.className = 'name';
+          name.innerHTML = response.name;
+          console.log(name.innerHTML);
+
           // create picture element
-          pictureURL = response.data.url;
+          pictureURL = response.picture.data.url;
           console.log(pictureURL);
           var img = document.createElement('img');
           img.className = 'profile-picture';
@@ -127,6 +133,7 @@ function handlePosterPicture(posterId, message, index) {
 
           // append all to posts
           // console.log("img append");
+          post.appendChild(name);
           post.appendChild(img);
           // console.log("mess append");
           post.appendChild(mess);
@@ -135,7 +142,9 @@ function handlePosterPicture(posterId, message, index) {
 
           // add to data storage
           previousLength = friends.length;
-          friends.add(posterId);
+          if (!hasLoadedMaxPosts) {
+            friends.add(posterId);
+          }
           newLength = friends.length;
           if (previousLength != newLength) {
             friendDivs.push(post);
