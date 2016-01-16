@@ -153,7 +153,7 @@ function getUserId(feed) {
 function displayFeed() {
   var feed;
   /* make the API call */
-  FB.api("/me/feed?fields=from,message&limit=50",
+  FB.api("/me/feed?fields=from,message&limit=200",
       function (response) {
         if (response && !response.error) {
           console.log("logging data");
