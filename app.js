@@ -129,11 +129,11 @@ function handlePosterPicture(posterId, message, index) {
 
 function handlePosts(userId, feed) {
   for (var i = 0; i < feed.length; i++) {
-    var posterId = feed[i].from.id
-    if (posterId != userId) {
+    var posterId = feed[i].from.id;
+    //if (posterId != userId) {
       // needs to be changed to account for posts which user is tagged in
-      handlePosterPicture(posterId, feed[i].message, i)
-    }
+    handlePosterPicture(posterId, feed[i].message, i);
+    //}
   }
 }
 
