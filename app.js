@@ -86,14 +86,17 @@ function testAPI() {
 }
 
 function handlePosterPicture(posterId, message) {
-  var request = "/" + posterId + "/picture";
+  var request = "/" + posterId + "/picture?width=300";
   FB.api(
     request,
     function (response) {
       if (response && !response.error) {
         if (message !== undefined) {
-          console.log(response);
+          pictureURL = response.data.url;
+          console.log(pictureURL);
+          document.getElementById('profile-picture').src = pictureURL;
           console.log(message);
+          document.getElementById('message').innerHTML = message;
         }
       }
     }
