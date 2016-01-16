@@ -95,11 +95,11 @@ function handlePosterPicture(posterId, message, index) {
           var post = document.createElement('div');
           post.className = 'post';
           // create picture element
+          pictureURL = response.data.url;
           console.log(pictureURL);
           var img = document.createElement('img');
           img.className = 'profile-picture';
           img.id = index;
-          pictureURL = response.data.url;
           img.src = pictureURL;
           // create message element
           console.log(message);
