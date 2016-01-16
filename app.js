@@ -134,9 +134,13 @@ function handlePosterPicture(posterId, message, index) {
           // document.getElementById('posts').appendChild(post);
 
           // add to data storage
+          previousLength = friends.length;
           friends.add(posterId);
-          friendDivs.push(post);
-          if (friendDivs.length >= MAX_SINGLE_POSTS && !hasLoadedMaxPosts) {
+          newLength = friends.length;
+          if (previousLength != newLength) {
+            friendDivs.push(post);
+          }
+          if (friends.length >= MAX_SINGLE_POSTS && !hasLoadedMaxPosts) {
             handleSinglePosts();
             hasLoadedMaxPosts = true;
           }
