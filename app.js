@@ -1,8 +1,8 @@
 // app.js
 
 var MAX_RESULTS = 100;
-var MAX_SINGLE_POSTS = 16;
-var INDIVIDUAL_DISPLAY = 8;
+var MAX_SINGLE_POSTS = 10;
+var INDIVIDUAL_DISPLAY = 5;
 
 var spinner;
 
@@ -171,7 +171,7 @@ function handlePosts(userId, feed) {
   var count = 0;
   for (var i = 0; i < feed.length; i++) {
     var posterId = feed[i].from.id;
-    if (posterId != userId && !friends.has(posterId)) {
+    if (posterId != userId && !friends.has(posterId)) { // disclude page posts
       handlePosterPicture(posterId, feed[i].message, i);
     }
   }
