@@ -97,7 +97,7 @@ function testAPI() {
 }
 
 function appendInfoScreen() {
-  document.getElementById('status').innerHTML = "How do you feel?";
+  document.getElementById('status').innerHTML = "Can you feel it?";
   var sub = document.getElementById('spinner')
   sub.innerHTML = "Here are some nice posts from people who think you're awesome.";
   sub.style.marginTop = "1.5em";
