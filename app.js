@@ -105,7 +105,7 @@ function nextPost(index) {
     setTimeout(nextPost(index+1), 3000);
     setTimeout(function() {
       console.log("huh");
-    }, 5000);
+    }, 10000);
   }
 }
 
