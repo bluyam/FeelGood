@@ -95,8 +95,10 @@ function testAPI() {
 }
 
 function nextPost(index) {
-  var posts = document.getElementById('posts')
-  posts.empty();
+  var posts = document.getElementById('posts');
+  while (posts.firstChild) {
+    posts.removeChild(posts.firstChild);
+  }
   posts.appendChild(friendDivs[index]);
   if (index < friendDivs.length && index < INDIVIDUAL_DISPLAY) {
     setTimeout(function(){ nextPost(index++); }, 3000);
