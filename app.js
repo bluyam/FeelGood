@@ -85,10 +85,9 @@ function testAPI() {
   FB.api('/me', function(response) {
     console.log('Successful login for: ' + response.name);
     var status = document.getElementById('status');
-    status.innerHTML = 'Thanks for logging in, ' + response.name + '!';
+    status.innerHTML = 'Feeling The Love...';
     var loginButton = document.getElementById('fb-login-button');
     loginButton.style.display = 'none';
-    status.style.display = 'none';
     var target = document.getElementById('spinner');
     spinner = new Spinner().spin(target);
     displayFeed();
@@ -97,6 +96,8 @@ function testAPI() {
 
 function handleSinglePosts() {
   spinner.stop();
+  var status = document.getElementById('status');
+  status.style.display = 'none';
   for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
     document.getElementById('posts').appendChild(friendDivs[i]);
   }
@@ -157,8 +158,8 @@ function handlePosterPicture(posterId, message, index) {
           }
           if (friends.size >= MAX_SINGLE_POSTS && !hasLoadedMaxPosts) {
             handleSinglePosts();
-            console.log(friendDivs.length);
             hasLoadedMaxPosts = true;
+            console.log(friendDivs.length);
           }
         }
       }
