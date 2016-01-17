@@ -10,6 +10,8 @@ var friends = new Set([]);
 var friendDivs = [];
 var hasLoadedMaxPosts = false;
 
+var images = new Set([]);
+
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
   console.log('statusChangeCallback');
@@ -138,6 +140,8 @@ function handlePosterPicture(posterId, message, index) {
 
           // create picture element
           pictureURL = response.picture.data.url;
+          var imageObject = new Image();
+          imageObject.src = pictureURL;
           console.log(pictureURL);
           var img = document.createElement('div');
           img.className = 'profile-picture';
@@ -166,6 +170,7 @@ function handlePosterPicture(posterId, message, index) {
           previousLength = friends.size;
           if (!hasLoadedMaxPosts) {
             friends.add(posterId);
+            images.add(imageObject);
           }
           newLength = friends.size;
           if (previousLength != newLength) {
@@ -175,6 +180,7 @@ function handlePosterPicture(posterId, message, index) {
             handleSinglePosts();
             hasLoadedMaxPosts = true;
             console.log(friendDivs.length);
+            console.log(images);
           }
         }
       }
