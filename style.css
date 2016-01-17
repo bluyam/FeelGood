@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 
-#post {
+.post {
   opacity: 0;
   padding-top: 0em;
   padding-bottom: 0em;
@@ -109,7 +109,7 @@ body {
   }
 }
 
-.1 {
+#post1 {
   animation-name: standardFade;
   animation-duration: 2s;
   animation-delay: 10s;
