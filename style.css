@@ -9,6 +9,10 @@ body {
   font-size: 55px;
   padding-top: 4.5em;
   padding-bottom: .43em;
+  animation-name: loaderFade;
+  animation-duration: 1s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
 }
 
 #spinner {
@@ -16,15 +20,17 @@ body {
   margin-top: 3em;
   position: relative;
   text-align: center;
-}
-
-#loading-screen {
   animation-name: loaderFade;
   animation-duration: 1s;
   animation-delay: 8s;
   animation-fill-mode: forwards;
+}
+
+#loading-screen {
   height: 653.483px;
 }
+
+
 
 .post {
   opacity: 0;
