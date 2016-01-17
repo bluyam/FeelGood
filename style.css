@@ -204,6 +204,7 @@ body {
 }
 
 #finalpost {
+  height: 653.483px;
   animation-name: finalFade;
   animation-duration: 5s;
   animation-delay: 35s;
