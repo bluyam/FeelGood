@@ -95,6 +95,7 @@ function testAPI() {
 }
 
 function nextPost(index) {
+  console.log("next post: index "+(index.toString()));
   var posts = document.getElementById('posts');
   while (posts.firstChild) {
     posts.removeChild(posts.firstChild);
