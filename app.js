@@ -38,6 +38,10 @@ function statusChangeCallback(response) {
 // code below.
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
+    var target = document.getElementById('spinner');
+    spinner = new Spinner().spin(target);
+    var status = document.getElementById('status');
+    status.innerHTML = "Verifying Login Status..."
     statusChangeCallback(response);
   });
 }
@@ -84,13 +88,10 @@ function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
   FB.api('/me', function(response) {
     console.log('Successful login for: ' + response.name);
-    var status = document.getElementById('status');
-    status.innerHTML = 'Thanks for logging in, ' + response.name + '!';
     var loginButton = document.getElementById('fb-login-button');
     loginButton.style.display = 'none';
-    status.style.display = 'none';
-    var target = document.getElementById('spinner');
-    spinner = new Spinner().spin(target);
+    var status = document.getElementById('status');
+    status.innerHTML = 'Retrieving Data From Facebook...';
     displayFeed();
   });
 }

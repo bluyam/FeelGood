@@ -2,6 +2,14 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+#status {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 75px;
+  padding-bottom: .43em;
+}
+
 .post {
   width: 100%;
   margin: 0 auto;
