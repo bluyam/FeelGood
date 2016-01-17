@@ -37,10 +37,6 @@ function statusChangeCallback(response) {
 // Button.  See the onlogin handler attached to it in the sample
 // code below.
 function checkLoginState() {
-  var target = document.getElementById('spinner');
-  spinner = new Spinner().spin(target);
-  var status = document.getElementById('status');
-  status.innerHTML = "Verifying Login Status..."
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
@@ -88,15 +84,19 @@ function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
   FB.api('/me', function(response) {
     console.log('Successful login for: ' + response.name);
+    var status = document.getElementById('status');
+    status.innerHTML = 'Thanks for logging in, ' + response.name + '!';
     var loginButton = document.getElementById('fb-login-button');
     loginButton.style.display = 'none';
-    var status = document.getElementById('status');
-    status.innerHTML = 'Retrieving Data From Facebook...';
+    status.style.display = 'none';
+    var target = document.getElementById('spinner');
+    spinner = new Spinner().spin(target);
     displayFeed();
   });
 }
 
 function handleSinglePosts() {
+  spinner.stop();
   for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
     document.getElementById('posts').appendChild(friendDivs[i]);
   }
@@ -160,9 +160,6 @@ function handlePosterPicture(posterId, message, index) {
             console.log(friendDivs.length);
             hasLoadedMaxPosts = true;
           }
-          loginButton.style.display = 'none';
-          var status = document.getElementById('status');
-          status.style.display = 'none';
         }
       }
     }
@@ -172,8 +169,6 @@ function handlePosterPicture(posterId, message, index) {
 
 function handlePosts(userId, feed) {
   var count = 0;
-  //spinner.stop();
-
   for (var i = 0; i < feed.length; i++) {
     var posterId = feed[i].from.id;
     if (posterId != userId && !friends.has(posterId)) { // disclude page posts
