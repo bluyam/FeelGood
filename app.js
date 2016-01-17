@@ -96,7 +96,9 @@ function testAPI() {
 
 function appendInfoScreen() {
   document.getElementById('status').innerHTML = "Do You Feel Loved?";
-  document.getElementById('spinner').innerHTML = "Here are some nice posts from people who think you're awesome.";
+  var sub = document.getElementById('spinner')
+  sub.innerHTML = "Here are some nice posts from people who think you're awesome.";
+  sub.style.marginTop = "1.5em";
 }
 
 function begin() {
