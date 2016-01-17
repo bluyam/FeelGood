@@ -94,7 +94,13 @@ function testAPI() {
   });
 }
 
+function appendInfoScreen() {
+  document.getElementById('status').innerHTML = "Do You Feel Loved?";
+  document.getElementById('spinner').innerHTML = "Here are some nice posts from people who think you're awesome.";
+}
+
 function begin() {
+  appendInfoScreen();
   for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
     friendDivs[i].className = "post";
     friendDivs[i].id = "post"+i.toString();
@@ -105,9 +111,9 @@ function begin() {
 function handleSinglePosts() {
   spinner.stop();
   var spinnerDiv = document.getElementById('spinner');
-  spinnerDiv.style.display = 'none';
+  // spinnerDiv.style.display = 'none';
   var status = document.getElementById('status');
-  status.style.display = 'none';
+  // status.style.display = 'none';
   begin();
 }
 
@@ -207,7 +213,7 @@ function displayFeed() {
           // console.log("logging data");
           feed = response.data;
           // console.log(feed)
-          getUserId(feed)
+          getUserId(feed);
         }
       }
   );
