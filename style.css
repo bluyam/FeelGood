@@ -11,6 +11,10 @@ body {
   padding-bottom: .43em;
 }
 
+#spinner {
+  padding-top: 3em;
+}
+
 .post {
   width: 100%;
   margin: 0 auto;
