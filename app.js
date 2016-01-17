@@ -96,7 +96,8 @@ function testAPI() {
 
 function begin() {
   for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
-    friendDivs[i].id = i.toString();
+    friendDivs[i].className = i.toString();
+    friendDivs[i].id = "post";
     document.getElementById('posts').appendChild(friendDivs[i]);
   }
 }
