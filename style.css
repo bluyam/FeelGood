@@ -9,6 +9,7 @@ body {
   font-size: 55px;
   padding-top: 4.5em;
   padding-bottom: .43em;
+  position: absolute;
 }
 
 #spinner {
@@ -23,6 +24,7 @@ body {
   animation-delay: 3s;
   animation-fill-mode: forwards;
   height: 653.483px;
+  position: relative;
 }
 
 .post {
