@@ -12,3 +12,9 @@ use the results to build an interactive web page
 - maximize friend variety
 - display heart div of profile pictures
 - add share link at end
+
+it looks nice!
+- add loading element
+- slide in intro and click to continue
+- slide through statuses
+- collage of pictures
