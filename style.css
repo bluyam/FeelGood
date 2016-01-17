@@ -29,13 +29,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-.1 {
-  opacity: 1;
-  padding-top: 5em;
-  padding-bottom: 0em;
-  height: 653.483px;
-}
-
 .name {
   width: 90%;
   margin: 0 auto;
@@ -59,7 +52,6 @@ body {
   margin: 0 auto;
   font-style: italic;
 }
-
 
 @keyframes firstFade {
   0% {
@@ -115,5 +107,10 @@ body {
     padding-top: 5em;
     padding-bottom: 0em;
     height: 653.483px;
+  }
+  .1 {
+    animation-name: standardFade;
+    animation-duration: 2s;
+    animation-delay: 3s;
   }
 }
