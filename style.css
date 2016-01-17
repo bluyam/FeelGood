@@ -6,14 +6,14 @@ body {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  font-size: 75px;
+  font-size: 55px;
   padding-top: 3em;
   padding-bottom: .43em;
 }
 
 #spinner {
   margin: 0 auto;
-  margin-top: 4em;
+  margin-top: 3em;
   position: relative;
 }
 
