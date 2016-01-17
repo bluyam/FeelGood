@@ -2,6 +2,7 @@
 
 var MAX_RESULTS = 100;
 var MAX_SINGLE_POSTS = 16;
+var INDIVIDUAL_DISPLAY = 8;
 
 var friends = new Set([]);
 var friendDivs = [];
@@ -94,7 +95,7 @@ function handleSinglePosts() {
   var status = document.getElementById('status');
   status.style.display = 'block';
   status.innerHTML = 'Handling Posts!';
-  for (var i = 0; i < friendDivs.length; i++) {
+  for (var i = 0; i < friendDivs.length && i <= INDIVIDUAL_DISPLAY; i++) {
     document.getElementById('posts').appendChild(friendDivs[i]);
   }
   console.log(friends);
