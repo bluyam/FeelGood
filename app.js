@@ -4,6 +4,8 @@ var MAX_RESULTS = 100;
 var MAX_SINGLE_POSTS = 16;
 var INDIVIDUAL_DISPLAY = 8;
 
+var spinner;
+
 var friends = new Set([]);
 var friendDivs = [];
 var hasLoadedMaxPosts = false;
@@ -88,12 +90,13 @@ function testAPI() {
     loginButton.style.display = 'none';
     status.style.display = 'none';
     var target = document.getElementById('spinner');
-    var spinner = new Spinner().spin(target);
+    spinner = new Spinner().spin(target);
     displayFeed();
   });
 }
 
 function handleSinglePosts() {
+  spinner.stop();
   for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
     document.getElementById('posts').appendChild(friendDivs[i]);
   }
