@@ -11,7 +11,7 @@ body {
   padding-bottom: .43em;
   animation-name: loaderFadeNoOp;
   animation-duration: 1s;
-  animation-delay: 6s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
 }
 
@@ -22,7 +22,7 @@ body {
   text-align: center;
   animation-name: loaderFade;
   animation-duration: 1s;
-  animation-delay: 6s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
 }
 
@@ -30,7 +30,7 @@ body {
   height: 653.483px;
   animation-name: loaderFade;
   animation-duration: 1s;
-  animation-delay: 6s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
 }
 
@@ -134,8 +134,8 @@ body {
 
 #post0 {
   animation-name: standardFade;
-  animation-duration: 6s;
-  animation-delay: 2s;
+  animation-duration: 5s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
 
