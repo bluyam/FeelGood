@@ -92,9 +92,6 @@ function testAPI() {
 }
 
 function handleSinglePosts() {
-  var status = document.getElementById('status');
-  status.style.display = 'block';
-  status.innerHTML = 'Handling Posts!';
   for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
     document.getElementById('posts').appendChild(friendDivs[i]);
   }
@@ -132,7 +129,7 @@ function handlePosterPicture(posterId, message, index) {
           var mess = document.createElement('div');
           mess.className = 'message';
           mess.id = "message"+index.toString();
-          mess.innerHTML = message;
+          mess.innerHTML = "\""+message"\"";
           // console.log(mess);
 
           // append all to posts
