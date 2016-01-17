@@ -228,7 +228,7 @@ body {
   height: 0px;
   animation-name: finalFade;
   animation-duration: 5s;
-  animation-delay: 35s;
+  animation-delay: 40s;
   animation-fill-mode: forwards;
   position: relative;
 }
