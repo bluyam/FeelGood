@@ -17,6 +17,12 @@ body {
   position: relative;
 }
 
+#loading-screen {
+  animation-name: loaderFade;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
 .post {
   opacity: 0;
   padding-top: 0em;
@@ -52,12 +58,8 @@ body {
   font-style: italic;
 }
 
-@keyframes firstFade {
+@keyframes loaderFade {
   0% {
-    opacity: 1;
-    padding-top: 5em;
-    padding-bottom: 0em;
-    height: 653.483px;
   }
   100% {
     opacity: 0;
