@@ -111,7 +111,14 @@ body {
 
 #post0 {
   animation-name: standardFade;
-  animation-duration: 2s;
+  animation-duration: 5s;
   animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+#post1 {
+  animation-name: standardFade;
+  animation-duration: 5s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
