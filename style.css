@@ -69,6 +69,21 @@ body {
   font-style: italic;
 }
 
+#farewell-message {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 55px;
+  padding-top: 4.5em;
+  padding-bottom: .43em;
+}
+
+#share-link {
+  margin: 0 auto;
+  margin-top: 3em;
+  text-align: center;
+}
+
 @keyframes loaderFade {
   0% {
   }
@@ -185,5 +200,12 @@ body {
   animation-name: standardFade;
   animation-duration: 5s;
   animation-delay: 31s;
+  animation-fill-mode: forwards;
+}
+
+#finalpost {
+  animation-name: finalFade;
+  animation-duration: 5s;
+  animation-delay: 35s;
   animation-fill-mode: forwards;
 }
