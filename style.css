@@ -11,7 +11,7 @@ body {
   padding-bottom: .43em;
   animation-name: loaderFade;
   animation-duration: 1s;
-  animation-delay: 6s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
 }
 
@@ -22,7 +22,7 @@ body {
   text-align: center;
   animation-name: loaderFade;
   animation-duration: 1s;
-  animation-delay: 6s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
 }
 
@@ -30,11 +30,9 @@ body {
   height: 653.483px;
   animation-name: loaderFade;
   animation-duration: 1s;
-  animation-delay: 6s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
 }
-
-
 
 .post {
   opacity: 0;
@@ -127,48 +125,48 @@ body {
 #post0 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
 
 #post1 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 6s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
 }
 
 #post2 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 10s;
+  animation-delay: 11s;
   animation-fill-mode: forwards;
 }
 
 #post3 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 14s;
+  animation-delay: 15s;
   animation-fill-mode: forwards;
 }
 
 #post4 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 18s;
+  animation-delay: 19s;
   animation-fill-mode: forwards;
 }
 
 #post5 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 22s;
+  animation-delay: 23s;
   animation-fill-mode: forwards;
 }
 
 #post6 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 26s;
+  animation-delay: 27s;
   animation-fill-mode: forwards;
 }
