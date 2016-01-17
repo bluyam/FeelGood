@@ -96,6 +96,8 @@ function testAPI() {
 
 function handleSinglePosts() {
   spinner.stop();
+  var spinnerDiv = document.getElementById('spinner');
+  spinnerDiv.style.display = 'none';
   var status = document.getElementById('status');
   status.style.display = 'none';
   for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
