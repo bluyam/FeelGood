@@ -76,7 +76,6 @@ body {
   font-size: 80px;
   padding-top: 2.7em;
   padding-bottom: .2em;
-  position: absolute;
 }
 
 #share-link {
@@ -84,7 +83,6 @@ body {
   margin-top: 3em;
   text-align: center;
   font-size: 30px;
-  position: absolute;
 }
 
 @keyframes loaderFade {
@@ -208,6 +206,7 @@ body {
 
 #finalpost {
   height: 653.483px;
+  margin: 0 auto;
   animation-name: finalFade;
   animation-duration: 5s;
   animation-delay: 35s;
