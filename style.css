@@ -70,19 +70,25 @@ body {
 }
 
 #farewell-message {
+  position: absolute;
   width: 90%;
   margin: 0 auto;
   text-align: center;
   font-size: 80px;
   padding-top: 2.7em;
   padding-bottom: .2em;
+  top: 30%;
+  left: 50%;
 }
 
 #share-link {
+  position: absolute;
   margin: 0 auto;
   margin-top: 3em;
   text-align: center;
   font-size: 30px;
+  top: 70%;
+  left: 50%;
 }
 
 @keyframes loaderFade {
