@@ -21,6 +21,7 @@ body {
   animation-name: loaderFade;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  height: 653.483px;
 }
 
 .post {
