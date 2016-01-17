@@ -111,6 +111,7 @@ function begin() {
   //   document.getElementById('posts').appendChild(friendDivs[i]);
   // }
   var index = 0;
+  console.log("this should only happen once");
   nextPost(index);
 }
 
