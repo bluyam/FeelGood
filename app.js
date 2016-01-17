@@ -87,6 +87,8 @@ function testAPI() {
     var loginButton = document.getElementById('fb-login-button');
     loginButton.style.display = 'none';
     status.style.display = 'none';
+    var target = document.getElementById('spinner');
+    var spinner = new Spinner().spin(target);
     displayFeed();
   });
 }
