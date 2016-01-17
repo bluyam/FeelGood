@@ -12,7 +12,8 @@ body {
 }
 
 #spinner {
-  padding-top: 3em;
+  margin: 0 auto;
+  margin-bottom: 4em;
 }
 
 .post {
