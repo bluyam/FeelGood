@@ -109,9 +109,9 @@ body {
   }
 }
 
-#post1 {
+#post0 {
   animation-name: standardFade;
   animation-duration: 2s;
-  animation-delay: 3s;
+  animation-delay: 0s;
   animation-fill-mode: forwards;
 }
