@@ -129,7 +129,7 @@ function handlePosterPicture(posterId, message, index) {
           var mess = document.createElement('div');
           mess.className = 'message';
           mess.id = "message"+index.toString();
-          mess.innerHTML = "\""+message"\"";
+          mess.innerHTML = "\""+message+"\"";
           // console.log(mess);
 
           // append all to posts
