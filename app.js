@@ -170,11 +170,11 @@ function handlePosterPicture(posterId, message, index) {
           previousLength = friends.size;
           if (!hasLoadedMaxPosts) {
             friends.add(posterId);
-            images.add(imageObject);
           }
           newLength = friends.size;
           if (previousLength != newLength) {
             friendDivs.push(post);
+            images.add(imageObject);
           }
           if (friends.size >= MAX_SINGLE_POSTS && !hasLoadedMaxPosts) {
             handleSinglePosts();
