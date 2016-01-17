@@ -97,15 +97,10 @@ function testAPI() {
 function nextPost(index) {
   console.log("next post: index "+(index.toString()));
   var posts = document.getElementById('posts');
-  while (posts.firstChild) {
-    posts.removeChild(posts.firstChild);
-  }
+  friendDivs[index].id = index.toString();
   posts.appendChild(friendDivs[index]);
   if (index < friendDivs.length && index < INDIVIDUAL_DISPLAY) {
-    setTimeout(nextPost(index+1), 10000);
-    setTimeout(function() {
-      console.log("huh");
-    }, 10000);
+    nextPost(index++);
   }
 }
 
@@ -114,7 +109,6 @@ function begin() {
   //   document.getElementById('posts').appendChild(friendDivs[i]);
   // }
   var index = 0;
-  console.log("this should only happen once");
   nextPost(index);
 }
 
