@@ -103,7 +103,9 @@ function nextPost(index) {
   posts.appendChild(friendDivs[index]);
   if (index < friendDivs.length && index < INDIVIDUAL_DISPLAY) {
     setTimeout(nextPost(index+1), 3000);
-    setTimeout(console.log("huh"), 5000);
+    setTimeout(function() {
+      console.log("huh");
+    }, 5000);
   }
 }
 
