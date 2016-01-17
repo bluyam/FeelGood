@@ -20,7 +20,6 @@ body {
   margin-top: 3em;
   position: relative;
   text-align: center;
-  animation-name: loaderFadeNoOp;
   animation-duration: 1s;
   animation-delay: 7s;
   animation-fill-mode: forwards;
