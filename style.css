@@ -72,23 +72,34 @@ body {
 #farewell-message {
   position: absolute;
   width: 90%;
-  margin: 0 auto;
+  height: inherit;
+  /* margin: 0 auto; */
   text-align: center;
   font-size: 80px;
-  padding-top: 2.7em;
-  padding-bottom: .2em;
-  top: 30%;
-  left: 50%;
+  /* padding-top: 2.7em; */
+  /* padding-bottom: .2em; */
+  /* margin-top: 50%; */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 45%;
+  /* bottom: 0; */
+  /* margin-top: auto; */
+  /* margin-bottom: auto; */
+  overflow: hidden;
 }
 
 #share-link {
   position: absolute;
-  margin: 0 auto;
-  margin-top: 3em;
   text-align: center;
   font-size: 30px;
-  top: 70%;
-  left: 50%;
+  top: 75%;
+  margin-left: auto;
+  left: 0;
+  margin-right: auto;
+  right: 0;
+  overflow: hidden;
 }
 
 @keyframes loaderFade {
@@ -211,8 +222,7 @@ body {
 }
 
 #finalpost {
-  height: 653.483px;
-  margin: 0 auto;
+  height: 500px;
   animation-name: finalFade;
   animation-duration: 5s;
   animation-delay: 35s;
