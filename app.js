@@ -94,16 +94,30 @@ function testAPI() {
   });
 }
 
+function nextPost(index) {
+  var posts = document.getElementById('posts')
+  posts.empty();
+  posts.appendChild(friendDivs[index]);
+  if (index < friendDivs.length && index < INDIVIDUAL_DISPLAY) {
+    setTimeout(function(){ nextPost(index++); }, 3000);
+  }
+}
+
+function begin() {
+  // for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
+  //   document.getElementById('posts').appendChild(friendDivs[i]);
+  // }
+  var index = 0;
+  nextPost(index);
+}
+
 function handleSinglePosts() {
   spinner.stop();
   var spinnerDiv = document.getElementById('spinner');
   spinnerDiv.style.display = 'none';
   var status = document.getElementById('status');
   status.style.display = 'none';
-  for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
-    document.getElementById('posts').appendChild(friendDivs[i]);
-  }
-  console.log(friends);
+  begin();
 }
 
 function handlePosterPicture(posterId, message, index) {
