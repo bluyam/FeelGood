@@ -172,7 +172,7 @@ function handlePosterPicture(posterId, message, index) {
 
 function handlePosts(userId, feed) {
   var count = 0;
-  spinner.stop();
+  //spinner.stop();
 
   for (var i = 0; i < feed.length; i++) {
     var posterId = feed[i].from.id;
