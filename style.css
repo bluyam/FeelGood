@@ -159,7 +159,6 @@ body {
   }
   100% {
     opacity: 1;
-    padding-top: 5em;
     padding-bottom: 0em;
     height: 653.483px;
   }
@@ -228,7 +227,7 @@ body {
   height: 0px;
   animation-name: finalFade;
   animation-duration: 1s;
-  animation-delay: 37s;
+  animation-delay: 36s;
   animation-fill-mode: forwards;
   position: relative;
 }
