@@ -123,9 +123,16 @@ body {
   animation-fill-mode: forwards;
 }
 
-#post1 {
+#post2 {
   animation-name: standardFade;
   animation-duration: 5s;
   animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+#post3 {
+  animation-name: standardFade;
+  animation-duration: 5s;
+  animation-delay: 9s;
   animation-fill-mode: forwards;
 }
