@@ -18,10 +18,22 @@ body {
 }
 
 #post {
+  opacity: 0;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  height: 0px;
   width: 100%;
   margin: 0 auto;
   padding-top: 4.6em;
   padding-bottom: 4.6em;
+  animation-fill-mode: forwards;
+}
+
+.1 {
+  opacity: 1;
+  padding-top: 5em;
+  padding-bottom: 0em;
+  height: 653.483px;
 }
 
 .name {
@@ -46,4 +58,62 @@ body {
   font-size: 20px;
   margin: 0 auto;
   font-style: italic;
+}
+
+
+@keyframes firstFade {
+  0% {
+    opacity: 1;
+    padding-top: 5em;
+    padding-bottom: 0em;
+    height: 653.483px;
+  }
+  100% {
+    opacity: 0;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    height: 0px;
+  }
+}
+
+@keyframes standardFade {
+  0% {
+    opacity: 0;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    height: 0px;
+  }
+  25% {
+    opacity: 1;
+    padding-top: 5em;
+    padding-bottom: 0em;
+    height: 653.483px;
+  }
+  75% {
+    opacity: 1;
+    padding-top: 5em;
+    padding-bottom: 0em;
+    height: 653.483px;
+  }
+  100% {
+    opacity: 0;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    height: 0px;
+  }
+}
+
+@keyframes finalFade {
+  0% {
+    opacity: 0;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    height: 0px;
+  }
+  25% {
+    opacity: 1;
+    padding-top: 5em;
+    padding-bottom: 0em;
+    height: 653.483px;
+  }
 }
