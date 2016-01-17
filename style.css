@@ -11,7 +11,7 @@ body {
   padding-bottom: .43em;
   animation-name: loaderFade;
   animation-duration: 1s;
-  animation-delay: 8s;
+  animation-delay: 6s;
   animation-fill-mode: forwards;
 }
 
@@ -22,12 +22,16 @@ body {
   text-align: center;
   animation-name: loaderFade;
   animation-duration: 1s;
-  animation-delay: 8s;
+  animation-delay: 6s;
   animation-fill-mode: forwards;
 }
 
 #loading-screen {
   height: 653.483px;
+  animation-name: loaderFade;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
 }
 
 
