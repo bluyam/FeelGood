@@ -180,3 +180,10 @@ body {
   animation-delay: 27s;
   animation-fill-mode: forwards;
 }
+
+#post6 {
+  animation-name: standardFade;
+  animation-duration: 5s;
+  animation-delay: 31s;
+  animation-fill-mode: forwards;
+}
