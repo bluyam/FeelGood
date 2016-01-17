@@ -73,7 +73,7 @@ body {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  font-size: 55px;
+  font-size: 80px;
   padding-top: 4.5em;
   padding-bottom: .43em;
 }
@@ -82,6 +82,7 @@ body {
   margin: 0 auto;
   margin-top: 3em;
   text-align: center;
+  font-size: 30px;
 }
 
 @keyframes loaderFade {
