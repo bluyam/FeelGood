@@ -119,20 +119,41 @@ body {
 #post1 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 3s;
+  animation-delay: 4s;
   animation-fill-mode: forwards;
 }
 
 #post2 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 6s;
+  animation-delay: 8s;
   animation-fill-mode: forwards;
 }
 
 #post3 {
   animation-name: standardFade;
   animation-duration: 5s;
-  animation-delay: 9s;
+  animation-delay: 12s;
+  animation-fill-mode: forwards;
+}
+
+#post4 {
+  animation-name: standardFade;
+  animation-duration: 5s;
+  animation-delay: 16s;
+  animation-fill-mode: forwards;
+}
+
+#post5 {
+  animation-name: standardFade;
+  animation-duration: 5s;
+  animation-delay: 20s;
+  animation-fill-mode: forwards;
+}
+
+#post6 {
+  animation-name: standardFade;
+  animation-duration: 5s;
+  animation-delay: 24s;
   animation-fill-mode: forwards;
 }
