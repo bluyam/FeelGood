@@ -94,22 +94,11 @@ function testAPI() {
   });
 }
 
-function nextPost(index) {
-  console.log("next post: index "+(index.toString()));
-  var posts = document.getElementById('posts');
-  friendDivs[index].id = index.toString();
-  posts.appendChild(friendDivs[index]);
-  if (index < friendDivs.length && index < INDIVIDUAL_DISPLAY) {
-    nextPost(index++);
-  }
-}
-
 function begin() {
-  // for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
-  //   document.getElementById('posts').appendChild(friendDivs[i]);
-  // }
-  var index = 0;
-  nextPost(index);
+  for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
+    friendDivs[i].id = i.toString();
+    document.getElementById('posts').appendChild(friendDivs[i]);
+  }
 }
 
 function handleSinglePosts() {
