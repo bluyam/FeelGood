@@ -2,7 +2,7 @@
 
 var MAX_RESULTS = 100;
 var MAX_SINGLE_POSTS = 10;
-var INDIVIDUAL_DISPLAY = 5;
+var INDIVIDUAL_DISPLAY = 8;
 
 var spinner;
 
