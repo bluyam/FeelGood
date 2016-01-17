@@ -124,7 +124,7 @@ function handlePosterPicture(posterId, message, index) {
           var img = document.createElement('div');
           img.className = 'profile-picture';
           img.id = "image"+index.toString();
-          img.style = "background-image: url("+pictureURL+");";
+          img.style.backgroundImage = "url("+pictureURL+")";
           // console.log(img);
 
           // create message element
