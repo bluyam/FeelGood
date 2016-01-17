@@ -20,17 +20,13 @@ body {
   margin-top: 3em;
   position: relative;
   text-align: center;
-  animation-name: loaderSubFade;
+  animation-name: loaderFade;
   animation-duration: 1s;
   animation-delay: 8s;
   animation-fill-mode: forwards;
 }
 
 #loading-screen {
-  animation-name: loaderFade;
-  animation-duration: 1s;
-  animation-delay: 8s;
-  animation-fill-mode: forwards;
   height: 653.483px;
 }
 
@@ -79,18 +75,6 @@ body {
     padding-top: 0em;
     padding-bottom: 0em;
     height: 0px;
-  }
-}
-
-@keyframes loaderSubFade {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
