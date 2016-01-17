@@ -95,7 +95,7 @@ function handleSinglePosts() {
   var status = document.getElementById('status');
   status.style.display = 'block';
   status.innerHTML = 'Handling Posts!';
-  for (var i = 0; i < friendDivs.length && i <= INDIVIDUAL_DISPLAY; i++) {
+  for (var i = 0; i < friendDivs.length && i < INDIVIDUAL_DISPLAY; i++) {
     document.getElementById('posts').appendChild(friendDivs[i]);
   }
   console.log(friends);
@@ -121,10 +121,10 @@ function handlePosterPicture(posterId, message, index) {
           // create picture element
           pictureURL = response.picture.data.url;
           console.log(pictureURL);
-          var img = document.createElement('img');
+          var img = document.createElement('div');
           img.className = 'profile-picture';
           img.id = "image"+index.toString();
-          img.src = pictureURL;
+          img.style = "background-image: url("+pictureURL+");";
           // console.log(img);
 
           // create message element
