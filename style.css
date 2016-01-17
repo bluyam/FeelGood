@@ -27,6 +27,10 @@ body {
 }
 
 #loading-screen {
+  animation-name: loaderFade;
+  animation-duration: 1s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
   height: 653.483px;
 }
 
