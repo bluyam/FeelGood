@@ -15,7 +15,7 @@ body {
 #spinner {
   margin: 0 auto;
   margin-top: 3em;
-  position: relative;
+  position: absolute;
 }
 
 #loading-screen {
