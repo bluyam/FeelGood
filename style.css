@@ -15,12 +15,13 @@ body {
   margin: 0 auto;
   margin-top: 3em;
   position: relative;
+  text-align: center;
 }
 
 #loading-screen {
   animation-name: loaderFade;
-  animation-duration: 4s;
-  animation-delay: 4s;
+  animation-duration: 2s;
+  animation-delay: 6s;
   animation-fill-mode: forwards;
   height: 653.483px;
 }
